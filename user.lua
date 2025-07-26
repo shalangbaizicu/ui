@@ -18,6 +18,8 @@ UserLabel.TextScaled = true
 UserLabel.TextSize = 14
 UserLabel.TextWrapped = true
 UserLabel.Visible = true
+UserLabel.Active = true
+UserLabel.Draggable = true
 
 UIGradient.Color = ColorSequence.new{
     ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)),
