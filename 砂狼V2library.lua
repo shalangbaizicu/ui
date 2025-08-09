@@ -426,6 +426,14 @@
         end
     end
    )
+   
+   
+    
+    wait(0.1)
+    Main:TweenPosition(UDim2.new(0.5, 0, 2, 0), "Out", "Sine", 0.7, true)
+    wait(0.5)
+    Main:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), "Out", "Sine", 0.5, true) 
+    
         UIG.Parent = Open
         local window = {}
         window.Tab = function(window, name, icon)
