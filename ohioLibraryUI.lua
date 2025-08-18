@@ -449,10 +449,10 @@ Open.Parent = Frame
 Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Open.BorderSizePixel = 0
-Open.Size = UDim2.new(1.3, 1, 1.3, 1)
+Open.Size = UDim2.new(1.5, 3, 1.5, 3)
 Open.Active = true
 Open.Draggable = true
-Open.Image = "rbxassetid://124382926972686="
+Open.Image = "rbxassetid://124382926972686"
 Open.MouseButton1Click:Connect(function()
   Main.Visible = not Main.Visible
   Open.Image = Main.Visible and "rbxassetid://124382926972686" or "rbxassetid://124382926972686" --开关的图
