@@ -151,4 +151,4 @@ local function addRainbowTitleToLocalPlayer(player, titleText)
     addTitleToCharacter(character)
     player.CharacterAdded:Connect(addTitleToCharacter)
 end
-addRainbowTitleToLocalPlayer(LP, "砂狼作者")
+addRainbowTitleToLocalPlayer(LP, "砂狼用户")
