@@ -452,7 +452,7 @@ Open.BorderSizePixel = 0
 Open.Size = UDim2.new(1.5, 3, 1.5, 3)
 Open.Active = true
 Open.Draggable = true
-Open.Image = "rbxassetid://124382926972686"
+Open.Image = "rbxassetid://110455786432038"
 Open.MouseButton1Click:Connect(function()
   Main.Visible = not Main.Visible
   Open.Image = Main.Visible and "rbxassetid://124382926972686" or "rbxassetid://124382926972686" --开关的图
