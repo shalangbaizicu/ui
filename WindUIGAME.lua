@@ -1195,7 +1195,7 @@ PaddingBottom=UDim.new(0,16),
 
 
 
-local B=g("Exit","log-out",function()
+local B=g("关闭","log-out",function()
 o:Close()()
 end,"Tertiary",z.Frame)
 
@@ -1207,7 +1207,7 @@ B.AnchorPoint=Vector2.new(0,1)
 end
 
 if i.KeySystem.URL then
-g("Get key","key",function()
+g("获取卡密","key",function()
 setclipboard(i.KeySystem.URL)
 end,"Secondary",z.Frame)
 end
@@ -7791,17 +7791,17 @@ o:CreateTopbarButton("Close","x",function()
 e(o.UIElements.Main,0.35,{Position=UDim2.new(0.5,0,0.5,0)},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
 o:Dialog{
 
-Title="Close Window",
-Content="Do you want to close this window? You will not be able to open it again.",
+Title="关闭窗口",
+Content="是否关闭窗口",
 Buttons={
 {
-Title="Cancel",
+Title="取消",
 
 Callback=function()end,
 Variant="Secondary",
 },
 {
-Title="Close Window",
+Title="确定",
 
 Callback=function()o:Close():Destroy()end,
 Variant="Primary",
