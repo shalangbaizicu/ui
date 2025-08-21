@@ -7006,8 +7006,6 @@ o.UIElements.Main = b("Frame",{
     r,
     s,
     
-    -- 在这里添加彩虹边框代码
-    -- 创建彩虹边框
     ac.NewRoundFrame(o.UICorner + 2, "SquircleOutline2", {
         Size = UDim2.new(1, 6, 1, 6),
         Position = UDim2.new(0.5, 0, 0.5, 0),
@@ -7016,7 +7014,6 @@ o.UIElements.Main = b("Frame",{
         ImageTransparency = 0,
         Name = "RainbowBorder"
     }, {
-        -- 创建UIGradient
         b("UIGradient", {
             Rotation = 0,
             Color = ColorSequence.new{
@@ -7034,16 +7031,14 @@ o.UIElements.Main = b("Frame",{
     })
 })
 
--- 在o.UIElements.Main创建后添加动画代码
--- 找到彩虹边框并设置动画
 local rainbowBorder = o.UIElements.Main:WaitForChild("RainbowBorder")
 local gradient = rainbowBorder:WaitForChild("RainbowGradient")
 
--- 创建动画
 local tweenInfo = TweenInfo.new(3, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1)
 local goal = {Offset = Vector2.new(1, 0)}
 local tween = game:GetService("TweenService"):Create(gradient, tweenInfo, goal)
 tween:Play()
+
 b("Frame",{
 Size=UDim2.new(1,0,1,0),
 BackgroundTransparency=1,
