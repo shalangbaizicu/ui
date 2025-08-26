@@ -2474,69 +2474,71 @@ end)
 local r=d.Drag(p)
 
 
+function i.Visible(s,t)
+p.Visible=t
+end
+
 function i.Edit(s,t)
-    local u={
-        Title=t.Title,
-        Icon=t.Icon,
-        Enabled=t.Enabled,
-        Position=t.Position,
-        Draggable=t.Draggable,
-        OnlyMobile=t.OnlyMobile,
-        CornerRadius=t.CornerRadius or UDim.new(1,0),
-        StrokeThickness=t.StrokeThickness or 2,
-        Color=t.Color or ColorSequence.new(Color3.fromHex"40c9ff",Color3.fromHex"e81cff"),
-    }
+local u={
+Title=t.Title,
+Icon=t.Icon,
+Enabled=t.Enabled,
+Position=t.Position,
+Draggable=t.Draggable,
+OnlyMobile=t.OnlyMobile,
+CornerRadius=t.CornerRadius or UDim.new(1,0),
+StrokeThickness=t.StrokeThickness or 2,
+Color=t.Color or ColorSequence.new(Color3.fromHex"40c9ff",Color3.fromHex"e81cff"),
+}
 
-    -- 修改这里：添加彩虹渐变效果
-    if u.Color then
-        q.UIStroke.UIGradient.Color = u.Color
-        if Glow then
-            Glow.UIGradient.Color = u.Color
-        end
-    end
+if u.Color then
+q.UIStroke.UIGradient.Color = u.Color
+if Glow then
+Glow.UIGradient.Color = u.Color
+end
+end
 
-    -- 其他原有代码保持不变...
-    if u.Enabled==false then
-        h.IsOpenButtonEnabled=false
-    end
-    if u.Draggable==false and l and o then
-        l.Visible=u.Draggable
-        o.Visible=u.Draggable
+if u.Enabled==false then
+h.IsOpenButtonEnabled=false
+end
+if u.Draggable==false and l and o then
+l.Visible=u.Draggable
+o.Visible=u.Draggable
 
-        if r then
-            r:Set(u.Draggable)
-        end
-    end
-    if u.Position and OpenButtonContainer then
-        OpenButtonContainer.Position=u.Position
-    end
+if r then
+r:Set(u.Draggable)
+end
+end
+if u.Position and OpenButtonContainer then
+OpenButtonContainer.Position=u.Position
+end
 
-    local v=g.KeyboardEnabled or not g.TouchEnabled
-    b.Visible=not u.OnlyMobile or not v
+local v=g.KeyboardEnabled or not g.TouchEnabled
+b.Visible=not u.OnlyMobile or not v
 
-    if not b.Visible then return end
+if not b.Visible then return end
 
-    if k then
-        if u.Title then
-            k.Text=u.Title
-            d:ChangeTranslationKey(k,u.Title)
-        elseif u.Title==nil then
-            -- 保持原样
-        end
-    end
+if k then
+if u.Title then
+k.Text=u.Title
+d:ChangeTranslationKey(k,u.Title)
+elseif u.Title==nil then
 
-    if u.Icon then
-        i:SetIcon(u.Icon)
-    end
+end
+end
 
-    q.UIStroke.UIGradient.Color=u.Color
-    if Glow then
-        Glow.UIGradient.Color=u.Color
-    end
+if u.Icon then
+i:SetIcon(u.Icon)
+end
 
-    q.UICorner.CornerRadius=u.CornerRadius
-    q.TextButton.UICorner.CornerRadius=UDim.new(u.CornerRadius.Scale,u.CornerRadius.Offset-4)
-    q.UIStroke.Thickness=u.StrokeThickness
+q.UIStroke.UIGradient.Color=u.Color
+if Glow then
+Glow.UIGradient.Color=u.Color
+end
+
+q.UICorner.CornerRadius=u.CornerRadius
+q.TextButton.UICorner.CornerRadius=UDim.new(u.CornerRadius.Scale,u.CornerRadius.Offset-4)
+q.UIStroke.Thickness=u.StrokeThickness
 end
 
 return i
